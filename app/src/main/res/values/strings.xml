@@ -4,7 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
-    <string name="counter_text">aa</string>
+    <string name="counter_text">0</string>
     <string name="counter_button">Gather</string>
     <string name="gather_toast">You\'ve gathered 20 things!</string>
 </resources>

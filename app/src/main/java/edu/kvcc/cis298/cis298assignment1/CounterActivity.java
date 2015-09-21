@@ -6,22 +6,37 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class CounterActivity extends AppCompatActivity {
 
     private Button mCounterButton;
+    private TextView mTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_counter);
 
+        mTextView = (TextView) findViewById(R.id.text_view);
+
         mCounterButton = (Button) findViewById(R.id.counter_button);
         mCounterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(CounterActivity.this, R.string.gather_toast, Toast.LENGTH_SHORT).show();
+
+                String theText = mTextView.getText().toString();
+                int theValue = Integer.parseInt(theText);
+
+                theValue++;
+
+                String theResult = Integer.toString(theValue);
+                mTextView.setText(theResult);
+
+                if (theValue == 20) {
+                    Toast.makeText(CounterActivity.this, R.string.gather_toast, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
