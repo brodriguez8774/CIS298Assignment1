@@ -11,7 +11,8 @@ import android.widget.Toast;
 
 public class CounterActivity extends AppCompatActivity {
 
-    private Button mCounterButton;
+    private Button mGatherButton;
+    private Button mMinusButton;
     private TextView mTextView;
 
     @Override
@@ -21,8 +22,8 @@ public class CounterActivity extends AppCompatActivity {
 
         mTextView = (TextView) findViewById(R.id.text_view);
 
-        mCounterButton = (Button) findViewById(R.id.counter_button);
-        mCounterButton.setOnClickListener(new View.OnClickListener() {
+        mGatherButton = (Button) findViewById(R.id.gather_button);
+        mGatherButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -37,6 +38,21 @@ public class CounterActivity extends AppCompatActivity {
                 if (theValue == 20) {
                     Toast.makeText(CounterActivity.this, R.string.gather_toast, Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        mMinusButton = (Button) findViewById(R.id.minus_button);
+        mMinusButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+                String theText = mTextView.getText().toString();
+                int theValue = Integer.parseInt(theText);
+
+                theValue--;
+
+                String theResult = Integer.toString(theValue);
+                mTextView.setText(theResult);
             }
         });
     }

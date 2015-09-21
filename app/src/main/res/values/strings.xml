@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
 
     <string name="counter_text">0</string>
-    <string name="counter_button">Gather</string>
+    <string name="gather_button">Gather</string>
+    <string name="minus_button">Oops</string>
     <string name="gather_toast">You\'ve gathered 20 things!</string>
 </resources>
