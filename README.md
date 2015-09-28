@@ -2,6 +2,8 @@
 
 ## Author
 
+Brandon Rodriguez
+
 ## Description
 
 Create a person counter. The UI should have a + button, and a - button as well as a textview to store the value of the current number.
